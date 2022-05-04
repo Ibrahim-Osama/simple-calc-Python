@@ -38,11 +38,14 @@ def Division_userdata():
         num1 =float(e1.get())
         num2 =float(e2.get())
         if num2 == 0:
+            e3.insert(0 ,f"                              ")
+            e3.configure(state="readonly")
             aler()
-        result =   num1 / num2
-        e3.configure(state=NORMAL)
-        e3.insert(0 ,f"result is {result}")
-        e3.configure(state="readonly")
+        else:   
+            result =   num1 / num2
+            e3.configure(state=NORMAL)
+            e3.insert(0 ,f"result is {result}")
+            e3.configure(state="readonly")
 
 def multiplication_userdata():
     if e3.get()!="":
