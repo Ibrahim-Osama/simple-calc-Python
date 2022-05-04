@@ -6,6 +6,7 @@ w = Tk()
 w.title(string='Simple Calc')
 w.geometry('300x400')
 
+
 def aler():
     m.showerror("Error","You Ca`t Division for Zero")
 
@@ -20,12 +21,19 @@ def subtraction_userdata():
     if e1.get() == '' or e2.get() =='':
          m.showwarning("Error","write something no white space")
     else:
-        num1 =float(e1.get())
-        num2 =float(e2.get())
+        num1spilt = e1.get().replace(' ','')
+        num2spilt = e2.get().replace(' ','')
+        num1 =float(num1spilt)
+        num2 =float(num2spilt)
         result =   num1 - num2
         e3.configure(state=NORMAL)
         e3.insert(0 ,f"result is {result}")
         e3.configure(state="readonly")
+        e2.delete(0,"end")
+        e1.delete(0,"end")
+        e2.insert(0 ,num2spilt)
+        e1.insert(0 ,num1spilt)
+
     
 
 def Division_userdata():
@@ -35,8 +43,10 @@ def Division_userdata():
     if e1.get() == '' or e2.get() =='':
          m.showwarning("Error","write something no white space")
     else:
-        num1 =float(e1.get())
-        num2 =float(e2.get())
+        num1spilt = e1.get().replace(' ','')
+        num2spilt = e2.get().replace(' ','')
+        num1 =float(num1spilt)
+        num2 =float(num2spilt)
         if num2 == 0:
             e3.insert(0 ,f"                              ")
             e3.configure(state="readonly")
@@ -46,6 +56,10 @@ def Division_userdata():
             e3.configure(state=NORMAL)
             e3.insert(0 ,f"result is {result}")
             e3.configure(state="readonly")
+            e2.delete(0,"end")
+            e1.delete(0,"end")
+            e2.insert(0 ,num2spilt)
+            e1.insert(0 ,num1spilt)
 
 def multiplication_userdata():
     if e3.get()!="":
@@ -54,12 +68,18 @@ def multiplication_userdata():
     if e1.get() == '' or e2.get() =='':
          m.showwarning("Error","write something no white space")
     else:
-         num1 =float(e1.get())
-         num2 =float(e2.get())
-         result =   num1 * num2
-         e3.configure(state=NORMAL)
-         e3.insert(0 ,f"result is {result}")
-         e3.configure(state="readonly")
+        num1spilt = e1.get().replace(' ','')
+        num2spilt = e2.get().replace(' ','')
+        num1 =float(num1spilt)
+        num2 =float(num2spilt)
+        result =   num1 * num2
+        e3.configure(state=NORMAL)
+        e3.insert(0 ,f"result is {result}")
+        e3.configure(state="readonly")
+        e2.delete(0,"end")
+        e1.delete(0,"end")
+        e2.insert(0 ,num2spilt)
+        e1.insert(0 ,num1spilt)
 
 def addition_userdata():
     if e3.get()!="":
@@ -68,12 +88,19 @@ def addition_userdata():
     if e1.get() == '' or e2.get() =='':
          m.showwarning("Error","write something no white space")
     else:
-        num1 =float(e1.get())
-        num2 =float(e2.get())
+        num1spilt = e1.get().replace(' ','')
+        num2spilt = e2.get().replace(' ','')
+        num1 =float(num1spilt)
+        num2 =float(num2spilt)
         result =   num1 + num2
         e3.configure(state=NORMAL)
         e3.insert(0 ,f"result is {result}")
         e3.configure(state="readonly")
+        e2.delete(0,"end")
+        e1.delete(0,"end")
+        e2.insert(0 ,num2spilt)
+        e1.insert(0 ,num1spilt)
+        
 
 
 def cls():
