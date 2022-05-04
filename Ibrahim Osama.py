@@ -15,44 +15,18 @@ def validateentrys():
     W   
 
 def subtraction_userdata():
-    if e3.get()!="":
-        e3.configure(state=NORMAL)
-        e3.insert(0 ,f"                              ")
-    if e1.get() == '' or e2.get() =='':
-         m.showwarning("Error","write something no white space")
-    else:
-        num1spilt = e1.get().replace(' ','')
-        num2spilt = e2.get().replace(' ','')
-        num1 =float(num1spilt)
-        num2 =float(num2spilt)
-        result =   num1 - num2
-        e3.configure(state=NORMAL)
-        e3.insert(0 ,f"result is {result}")
-        e3.configure(state="readonly")
-        e2.delete(0,"end")
-        e1.delete(0,"end")
-        e2.insert(0 ,num2spilt)
-        e1.insert(0 ,num1spilt)
-
-    
-
-def Division_userdata():
-    if e3.get()!="":
-        e3.configure(state=NORMAL)
-        e3.insert(0 ,f"                              ")
-    if e1.get() == '' or e2.get() =='':
-         m.showwarning("Error","write something no white space")
-    else:
-        num1spilt = e1.get().replace(' ','')
-        num2spilt = e2.get().replace(' ','')
-        num1 =float(num1spilt)
-        num2 =float(num2spilt)
-        if num2 == 0:
+    try:
+        if e3.get()!="":
+            e3.configure(state=NORMAL)
             e3.insert(0 ,f"                              ")
-            e3.configure(state="readonly")
-            aler()
-        else:   
-            result =   num1 / num2
+        if e1.get() == '' or e2.get() =='':
+             m.showwarning("Error","write something no white space")
+        else:
+            num1spilt = e1.get().replace(' ','')
+            num2spilt = e2.get().replace(' ','')
+            num1 =float(num1spilt)
+            num2 =float(num2spilt)
+            result =   num1 - num2
             e3.configure(state=NORMAL)
             e3.insert(0 ,f"result is {result}")
             e3.configure(state="readonly")
@@ -60,47 +34,84 @@ def Division_userdata():
             e1.delete(0,"end")
             e2.insert(0 ,num2spilt)
             e1.insert(0 ,num1spilt)
+    except ValueError:
+         m.showwarning("Error","Write Only Numbers ")
+
+    
+
+def Division_userdata():
+    try:
+      if e3.get()!="":
+          e3.configure(state=NORMAL)
+          e3.insert(0 ,f"                              ")
+      if e1.get() == '' or e2.get() =='':
+           m.showwarning("Error","write something no white space")
+      else:
+          num1spilt = e1.get().replace(' ','')
+          num2spilt = e2.get().replace(' ','')
+          num1 =float(num1spilt)
+          num2 =float(num2spilt)
+          if num2 == 0:
+              e3.insert(0 ,f"                              ")
+              e3.configure(state="readonly")
+              aler()
+          else:   
+              result =   num1 / num2
+              e3.configure(state=NORMAL)
+              e3.insert(0 ,f"result is {result}")
+              e3.configure(state="readonly")
+              e2.delete(0,"end")
+              e1.delete(0,"end")
+              e2.insert(0 ,num2spilt)
+              e1.insert(0 ,num1spilt)
+    except ValueError:
+         m.showwarning("Error","Write Only Numbers ")
 
 def multiplication_userdata():
-    if e3.get()!="":
-        e3.configure(state=NORMAL)
-        e3.insert(0 ,f"                              ")
-    if e1.get() == '' or e2.get() =='':
-         m.showwarning("Error","write something no white space")
-    else:
-        num1spilt = e1.get().replace(' ','')
-        num2spilt = e2.get().replace(' ','')
-        num1 =float(num1spilt)
-        num2 =float(num2spilt)
-        result =   num1 * num2
-        e3.configure(state=NORMAL)
-        e3.insert(0 ,f"result is {result}")
-        e3.configure(state="readonly")
-        e2.delete(0,"end")
-        e1.delete(0,"end")
-        e2.insert(0 ,num2spilt)
-        e1.insert(0 ,num1spilt)
+    try:
+       if e3.get()!="":
+           e3.configure(state=NORMAL)
+           e3.insert(0 ,f"                              ")
+       if e1.get() == '' or e2.get() =='':
+            m.showwarning("Error","write something no white space")
+       else:
+           num1spilt = e1.get().replace(' ','')
+           num2spilt = e2.get().replace(' ','')
+           num1 =float(num1spilt)
+           num2 =float(num2spilt)
+           result =   num1 * num2
+           e3.configure(state=NORMAL)
+           e3.insert(0 ,f"result is {result}")
+           e3.configure(state="readonly")
+           e2.delete(0,"end")
+           e1.delete(0,"end")
+           e2.insert(0 ,num2spilt)
+           e1.insert(0 ,num1spilt)
+    except ValueError:
+         m.showwarning("Error","Write Only Numbers ")
 
 def addition_userdata():
-    if e3.get()!="":
-        e3.configure(state=NORMAL)
-        e3.insert(0 ,f"                              ")
-    if e1.get() == '' or e2.get() =='':
-         m.showwarning("Error","write something no white space")
-    else:
-        num1spilt = e1.get().replace(' ','')
-        num2spilt = e2.get().replace(' ','')
-        num1 =float(num1spilt)
-        num2 =float(num2spilt)
-        result =   num1 + num2
-        e3.configure(state=NORMAL)
-        e3.insert(0 ,f"result is {result}")
-        e3.configure(state="readonly")
-        e2.delete(0,"end")
-        e1.delete(0,"end")
-        e2.insert(0 ,num2spilt)
-        e1.insert(0 ,num1spilt)
-        
+    try:
+        if e3.get()!="":
+            e3.configure(state=NORMAL)
+            e3.insert(0 ,f"                              ")
+        if e1.get() == '' or e2.get() =='':
+             m.showwarning("Error","write something no white space")
+        else:
+            num1spilt = e1.get().replace(' ','')
+            num2spilt = e2.get().replace(' ','')
+            num1 =float(num1spilt)
+            num2 =float(num2spilt)
+            result =   num1 + num2
+            e3.configure(state=NORMAL)
+            e3.insert(0 ,f"result is {result}")
+            e3.configure(state="readonly")
+            e2.delete(0,"end")
+            e1.delete(0,"end")
+            e2.insert(0 ,num2spilt)
+            e1.insert(0 ,num1spilt)
+    except ValueError:
+         m.showwarning("Error","Write Only Numbers ")
 
 
 def cls():
