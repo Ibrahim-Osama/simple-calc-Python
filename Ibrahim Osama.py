@@ -142,21 +142,21 @@ label1 = Label(fleft , text= 'Frist Number').pack(pady=20)
 label2 = Label(fleft , text= 'Second Number').pack(pady=20)
 label3 = Label(fleft , text= 'Result').pack(pady=20)
 
-e1 = Entry(fright)
+e1 = Entry(fright , fg='red')
 e1.pack(pady=20)
-e2 = Entry(fright)
+e2 = Entry(fright,fg='red')
 e2.pack(pady=20)
-e3 = Entry(fright ,state="disabled")
+e3 = Entry(fright ,fg='darkblue',state="disabled")
 e3.pack(pady=20)
 
 
-b1 = Button( fbottom, text='+' ,width=5 , command=addition_userdata).grid(row=1, column=1)
-b1 = Button( fbottom, text='-' ,width=5 , command=subtraction_userdata).grid(row=1, column=5)
-b1 = Button( fbottom, text='*' ,width=5 , command=multiplication_userdata).grid(row=2, column=1)
-b1 = Button( fbottom, text='/' ,width=5 , command=Division_userdata).grid(row=2, column=5)
+b1 = Button( fbottom, text='+' ,width=5 ,bg='green',fg='white', command=addition_userdata).grid(row=1, column=1)
+b1 = Button( fbottom, text='-' ,width=5 ,bg='green',fg='white', command=subtraction_userdata).grid(row=1, column=5)
+b1 = Button( fbottom, text='*' ,width=5 ,bg='green',fg='white', command=multiplication_userdata).grid(row=2, column=1)
+b1 = Button( fbottom, text='/' ,width=5 ,bg='green',fg='white', command=Division_userdata).grid(row=2, column=5)
 
-clear = Button( text='clear',width=10 ,command=cls).pack(pady=10) #side=tk.LEFT
-exit = Button(text='exit', width=10 , command=close ).pack(pady=10) #side=tk.LEFT
+clear = Button( text='clear',width=10 ,bg='black',fg='white',command=cls).pack(pady=10) #side=tk.LEFT
+exit = Button(text='exit', width=10 ,bg='black',fg='white', command=close ).pack(pady=10) #side=tk.LEFT
 
 
 def exit():
