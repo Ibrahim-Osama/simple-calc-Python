@@ -159,5 +159,12 @@ clear = Button( text='clear',width=10 ,command=cls).pack(pady=10) #side=tk.LEFT
 exit = Button(text='exit', width=10 , command=close ).pack(pady=10) #side=tk.LEFT
 
 
+def exit():
+    "dummy function"
+    pass
+w.protocol("WM_DELETE_WINDOW", exit)
+btn_quit = Button( text="Quit", command=w.destroy )
+
+
 
 w.mainloop()
